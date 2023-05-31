@@ -102,7 +102,7 @@ def pull_cash(balance: float) -> (bool, float):
         if percent_summ < MIN_PERCENTAGE:
             percent_summ = MIN_PERCENTAGE
 
-        if balance - percent_summ < 0:
+        if balance - summ - percent_summ < 0:
             print("Недостаточно средств!")
         else:
             balance -= (summ + percent_summ)
