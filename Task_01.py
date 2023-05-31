@@ -16,19 +16,19 @@ def main():
     print_matrix(transpose_matrix(MATRIX))
 
 
-def print_matrix(matr: list[list]):
+def print_matrix(matrix: list[list]):
     """Вывод квадратной матрицы на экран"""
-    for row in matr:
+    for row in matrix:
         print(row)
 
 
-def transpose_matrix(matr: list[list]) -> list[list]:
+def transpose_matrix(matrix: list[list]) -> list[list]:
     """Транспонирование матрицы"""
-    new_matr = [[] for _ in range(0, len(matr[0]))]
-    for row in range(len(matr)):
-        for col in range(len(matr[row])):
-            new_matr[col].append(matr[row][col])
-    return new_matr
+    new_matrix = [[] for _ in range(0, len(matrix[0]))]
+    for row in range(len(matrix)):
+        for col in range(len(matrix[row])):
+            new_matrix[col].append(matrix[row][col])
+    return new_matrix
 
 
 if __name__ == "__main__":
